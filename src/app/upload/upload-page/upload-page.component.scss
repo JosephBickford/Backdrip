@@ -1,0 +1,32 @@
+.form-div {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  padding: 10px;
+}
+.form-div div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.form-div textarea {
+  resize: none;
+}
+
+.file {
+  margin: 10px auto;
+}
+
+.form-div label {
+  margin-top: 5px;
+}
+
+.form-div textarea,
+.title {
+  border: none;
+  outline: none;
+  background: rgb(112, 112, 112);
+  box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.25);
+}

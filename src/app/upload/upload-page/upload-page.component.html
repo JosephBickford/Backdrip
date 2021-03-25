@@ -1,0 +1,27 @@
+<div class="form-div" *ngIf="afAuth.authState | async as user">
+  <div>
+    <label for="title">Post title:</label>
+    <input class="title" type="text" name="title" id="title" #titleText />
+    <label for="description">Post description:</label>
+    <textarea name="description" id="description" #descText rows="8"></textarea>
+  </div>
+  <div>
+    <input
+      class="file"
+      type="file"
+      (change)="upload($event)"
+      accept="*.png.jpg"
+      id=""
+    />
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="uploadImage(titleText.value, descText.value, user.displayName)"
+    >
+      Upload Image
+    </button>
+  </div>
+  <div *ngIf="posted">
+    <p>Your post has gone through</p>
+  </div>
+</div>
